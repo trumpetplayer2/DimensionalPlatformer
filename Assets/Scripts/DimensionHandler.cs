@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DimensionHandler : MonoBehaviour
@@ -7,8 +8,10 @@ public class DimensionHandler : MonoBehaviour
     public Camera camera1;
     public Camera camera2;
     public int currentDimension = 0;
+    public int maxDimension = 1;
     public GameObject player;
-
+    public int timesSwapped = 0;
+    public TextMeshProUGUI[] SwapCounters;
     public void Start()
     {
         switch (currentDimension)
@@ -25,7 +28,10 @@ public class DimensionHandler : MonoBehaviour
         }
     public void Update()
     {
-        
+        foreach(TextMeshProUGUI gui in SwapCounters)
+        {
+            gui.text = "Swaps: " + timesSwapped;
+        }
     }
     public void switchLocations(int newLocation)
     {
@@ -44,5 +50,7 @@ public class DimensionHandler : MonoBehaviour
             v.x += 30;
             player.transform.position = v;
         }
+        currentDimension = newLocation;
+        timesSwapped += 1;
     }
 }
