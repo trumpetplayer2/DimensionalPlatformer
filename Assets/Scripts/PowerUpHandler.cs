@@ -16,6 +16,6 @@ public class PowerUpHandler : MonoBehaviour
         PlayerController controller = player.GetComponent<PlayerController>();
         controller.setPowerUp(powerUp);
         //This item has been consumed. Disable it.
-        this.enabled = false;
+        this.gameObject.SetActive(false);
     }
 }

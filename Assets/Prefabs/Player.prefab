@@ -220,9 +220,9 @@ MonoBehaviour:
   movementSpeed: 5
   Player: {fileID: 4142796539413341968}
   power: 0
-  jumpPower: 8
+  jumpPower: 6
   groundCheck: {fileID: 1823142976312452239}
-  groundCheckRadius: 0.5
+  groundCheckRadius: 0.25
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

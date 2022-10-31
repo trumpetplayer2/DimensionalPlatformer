@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private static int attemptNumber = 1;
     public double baseScore = 100;
     public int generalTime = 60;
+    private double swapTime = 0;
 
     private void Start()
     {
@@ -74,6 +75,7 @@ public class PlayerController : MonoBehaviour
     {
         //If there is no Dimension Handler, they can't switch dimensions
         if (Player.gameObject.GetComponent<DimensionHandler>() == null) { return; }
+        if(!(Time.timeAsDouble > swapTime)) { return; }
         DimensionHandler dimension = Player.gameObject.GetComponent<DimensionHandler>();
         if (Input.GetAxisRaw("Dimension Switch") != 0)
         {
@@ -83,11 +85,22 @@ public class PlayerController : MonoBehaviour
             if(direction < 0 && dimension.currentDimension > 0 && canSwapLeft)
             {
                 dimension.switchLocations(dimension.currentDimension - 1);
+                swapTime = Time.timeAsDouble + 0.5;
+            }else if(direction < 0 && canSwapLeft)
+            {
+                dimension.switchLocations(dimension.maxDimension);
+                swapTime = Time.timeAsDouble + 0.5;
             }
             //Check if player is at the last dimension, if not, allow travel forward
             if(direction > 0 && dimension.currentDimension < dimension.maxDimension && canSwapRight)
             {
                 dimension.switchLocations(dimension.currentDimension + 1);
+                swapTime = Time.timeAsDouble + 0.5;
+            }
+            else if(direction > 0 && canSwapRight)
+            {
+                dimension.switchLocations(0);
+                swapTime = Time.timeAsDouble + 0.5;
             }
         }
     }

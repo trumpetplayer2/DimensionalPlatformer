@@ -1264,7 +1264,6 @@ GameObject:
   - component: {fileID: 906903603}
   - component: {fileID: 906903606}
   - component: {fileID: 906903605}
-  - component: {fileID: 906903604}
   m_Layer: 0
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1292,19 +1291,6 @@ RectTransform:
   m_AnchoredPosition: {x: 6.1, y: -0.95}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &906903604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906903602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e9ede38282b3bd4d96302fb706a8bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: 1
 --- !u!114 &906903605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,7 +1560,6 @@ GameObject:
   - component: {fileID: 1052488901}
   - component: {fileID: 1052488904}
   - component: {fileID: 1052488903}
-  - component: {fileID: 1052488902}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1602,19 +1587,6 @@ RectTransform:
   m_AnchoredPosition: {x: 6.1, y: -0.95}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1052488902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052488900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e9ede38282b3bd4d96302fb706a8bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: 1
 --- !u!114 &1052488903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2360,7 +2332,6 @@ GameObject:
   - component: {fileID: 1649590164}
   - component: {fileID: 1649590166}
   - component: {fileID: 1649590165}
-  - component: {fileID: 1649590167}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2522,19 +2493,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1649590167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649590163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e9ede38282b3bd4d96302fb706a8bfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: 1
 --- !u!114 &1810921222 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4142796539413341983, guid: 94c4aa760c8f1f347bd5f2c443ed0f11, type: 3}
